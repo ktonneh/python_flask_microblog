@@ -4,10 +4,9 @@ from .forms import LoginForm
 
 @app.route('/')
 @app.route('/index')
-
 def index():
-	user = {'nickname': 'Elly'} #a fake user
-	posts = [
+    user = {'nickname': 'Elly'} #a fake user
+    posts = [
 		{
 		'author': {'nickname': 'John'},
 		'body':'Beautifula Day in Kenya'
@@ -18,7 +17,7 @@ def index():
 		}
 	]
 
-	return render_template('index.html',title='',user = user,posts=posts)
+    return render_template('index.html',title='',user = user,posts=posts)
 
 
 @app.route('/login',methods=['GET','POST'])
